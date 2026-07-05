@@ -967,7 +967,8 @@ private:
 		// No equivalent: elnv
 		RemoveFirstOccurrence(flags, 'v'); // verbose, com
 		ApplyFlags(ci, flags, 'h', "CS_NO_EXPIRE");
-		ApplyFlags(ci, flags, 'k', "KEEPTOPIC");
+		//ApplyFlags(ci, flags, 'k', "KEEPTOPIC");
+		ci->Extend<bool>("KEEPTOPIC");
 		ApplyFlags(ci, flags, 'o', "NOAUTOOP");
 		ApplyFlags(ci, flags, 'p', "CS_PRIVATE");
 		ApplyFlags(ci, flags, 'r', "RESTRICTED");
